@@ -1,5 +1,24 @@
 <h1>Articles#index</h1>
-
-<h1>Hello, Rails!</h1>
-
 <p>Find me in app/views/articles/index.html.erb</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @Articles.each do |item| %>
+      <tr>
+        <td><%= item.title %></td>
+        <td><%= item.body %></td>
+        <td><%= link_to "Show", item %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
