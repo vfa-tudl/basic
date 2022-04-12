@@ -1,0 +1,11 @@
+<html>
+<head>
+  <title><%= @page_title or "Page Title" %></title>
+  
+</head>
+<body>
+  
+    <p>Top Layout Header</p>
+  <div id="content"><%= content_for?(:content) ? yield(:content) : yield %></div>
+</body>
+</html>
