@@ -1,0 +1,19 @@
+<h1>
+ Form Create
+</h1>
+<form method="POST" action=" <%= clients_path %>">
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Name</label>
+  <input name="client[name]" class="form-control" id="exampleFormControlInput1" placeholder="Name follow Alphabet">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">FullName</label>
+  <input name="client[fullName]" class="form-control" id="exampleFormControlTextarea1" placeholder="Name follow Alphabet"></input>
+</div>
+<div class="col-auto">
+<button type="submit">
+  Create Client
+</button>
+</div>
+</div>

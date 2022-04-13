@@ -1,0 +1,32 @@
+<%=render "/layouts/header" %>
+
+<p>
+<%= link_to "create",new_client_path,class:"btn btn-success" %>
+</p>
+
+ 
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">FullName</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @clients.each do |item| %>
+    <tr>
+      <td><%= item.id %></td>
+      <td><%= item.name %></td>
+      <td><%= item.fullName %></td> 
+      <td><%= link_to "Show", item, class:"btn btn-primary" %></td>
+      <td><%= link_to "Edit", edit_client_path(item), class:"btn btn-warning" %></td>
+      <td><a href="/clients/<%= item.id%>" data-method='DELETE' class="btn btn-danger">Delete</td>
+    </tr>
+  <% end %>
+</tbody>
+  </tbody>
+</table>
+
+<%=render "/layouts/footer" %>

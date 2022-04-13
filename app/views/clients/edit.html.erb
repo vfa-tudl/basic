@@ -1,0 +1,14 @@
+<h1>
+ Form Edit
+</h1>
+<%= form_with model: @client do |form| %>
+    <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Name</label>
+    <%= form.text_field :name, class:"form-control" %>
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">FullName</label>
+    <%= form.text_field :fullName, class:"form-control" %>
+  </div>
+  <%= form.submit %>
+  <% end %>
